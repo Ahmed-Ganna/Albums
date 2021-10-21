@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Spokn Albums</string>
+    <string name="profile">Profile</string>
+    <string name="need_internet">Need internet to fetch data</string>
+    <string name="failed_try_again">Failed to load data. Please try again later.</string>
+    <string name="search_in_images">Search in images</string>
+    <string name="no_photos_error">No photos found</string>
+    <string name="photos">Photos</string>
+    <string name="action_share">Share</string>
+</resources>

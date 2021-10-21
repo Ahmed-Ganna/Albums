@@ -1,0 +1,66 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion versions.compileSdk
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.compileSdk
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled = true
+
+    }
+
+    buildTypes {
+        release {
+            buildConfigField 'String', 'BASE_URL', '"http://jsonplaceholder.typicode.com/"'
+        }
+        debug {
+            buildConfigField 'String', 'BASE_URL', '"http://jsonplaceholder.typicode.com/"'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility versions.sourceCompat
+        targetCompatibility versions.targetCompat
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api deps.support.appCompat
+    api deps.support.recyclerView
+    api deps.support.cardView
+    api deps.support.support
+    api deps.support.designSupport
+
+    api deps.android.lifecycleExt
+    api deps.android.lifecycleCommon
+    api deps.android.roomRuntime
+    api deps.android.roomRx
+    api deps.android.multiDex
+
+    api deps.reactivex.rxJava
+    api deps.reactivex.rxAndroid
+    api deps.reactivex.rxKotlin
+
+    api deps.google.dagger
+    kapt deps.google.daggerProcessor
+    api deps.google.gson
+
+    api deps.square.picasso
+    api deps.square.okhttpDownloader
+
+    api deps.square.retrofit
+    api deps.square.okhttp
+    api deps.square.okhttpLogger
+    api deps.square.gsonConverter
+    api deps.square.retrofitRxAdapter
+
+    api deps.additional.jodaTime
+
+}

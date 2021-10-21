@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.spokn.album.core">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application android:name="com.spokn.album.core.application.CoreApp" />
+
+</manifest>
